@@ -1,10 +1,14 @@
-import './App.css'
-import Home from './pages/home'
+import { BrowserRouter } from 'react-router-dom'
+import AuthRoutes from './pages/login/AuthRoutes.tsx'
+import UserRoutes from './pages/UserRoutes.tsx'
 
 function App() {
   return (
     <>
-      <Home></Home>
+      <BrowserRouter>
+        <AuthRoutes/>
+        <UserRoutes/>
+      </BrowserRouter>
     </>
   )
 }
