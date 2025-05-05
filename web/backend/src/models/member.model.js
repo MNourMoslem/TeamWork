@@ -13,11 +13,13 @@ const memberSchema = new mongoose.Schema({
         ref: "Project",
     },
 
-    role: {
+    role : String,
+
+    position: {
         type: String,
-        enum: ["admin", "member"],
-        required: true,
+        enum: ["Admin", "Manager", "Member"],
+        default : "Member"
     },
-});
+}, {timestamps : true});
 
 export const Member = mongoose.Model("Member", memberSchema);
