@@ -27,6 +27,11 @@ const userSchema = new mongoose.Schema(
 		resetPasswordExpiresAt: Date,
 		verificationToken: String,
 		verificationTokenExpiresAt: Date,
+	
+		projects : [{
+			type : mongoose.Schema.Types.ObjectId,
+			ref: "Project"
+		}]
 	},
 	{ timestamps: true }
 );
